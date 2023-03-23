@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="grid-guide.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
+  <!-- jQueryを利用出来るようにする設定 -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+  $(function(){
+      // <button id="menubtn">をクリックした時に実行する処理を指定
+    $("#menubtn").click(function(){
+         $("#menu").slideToggle();
+      //<nav id="menubtn">をクリックした時に実行する処理を指定
+         });
+});
+</script>
+
+  <title>BUSINESS</title>
+</head>
+<!-- 製作手順
+５−１：レイアウトの基本構造を作る
+５−２：ボックスの中にコンテンツを入れる
+５−３；レイアウトの調整
+５−４：レスポンシブWEBデザインの調整
+５−５：パーツの追加・修正
+５−６：ナビをトグル型に -->
+<body class="contents">
+<!-- ーーーーーーーーーーーーーーーーーーーー
+ボックスA
+ーーーーーーーーーーーーーーーーーーーーー -->
+  <div class="boxA">
+    <div class="boxA-inner">
+<!-- ーーーーーーーーーーーーーーーーーーーー
+               ボックス１（header-site)
+ーーーーーーーーーーーーーーーーーーーーー -->
+    <div class="box1">
+      <div class="site">
+        <h1><a href="#"><img src="logo-large.png" alt="TimeSwitch" width="250" height="33"></a></h1>
+      </div>
+    </div>
+    <!-- サイト名の画像を高解像度版に置き換える
+    250×33pxの代わりに４倍の1000×132pxを読込み
+    幅250高さ33に指定 p235p236-->
+
+<!-- ーーーーーーーーーーーーーーーーーー
+                  ボックス２(header-nav)：ナビ p273 276
+ーーーーーーーーーーーーーーーーーーー -->
+    <div class="box2">
+      <button type="button" id="menubtn">
+        <i class="fa fa-bars"></i><span>MENU</span>
+      </button>
+
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="#">トップ</a></li>
+          <li><a href="#">沿革</a></li>
+          <li><a href="#">事業紹介</a></li>
+          <li><a href="#">採用情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </div>
+
+  <!-- ーーーーーーーーーーーーーーーーーーー
+  ボックス７
+ーーーーーーーーーーーーーーーーーーーーー <-->
+  <div class="box7">
+    <div class="box7-1">
+    <article class="kiji">
+
+<!-- パンくずリスト -->
+    <div class="bread">
+      <ol>
+        <li><a href="#">トップ</a></li>
+        <li><a href="#">事業紹介</a></li>
+      </ol>
+    </div>
+
+      <h1>データの分析・解析</h1>
+      <img src="header-data.jpg" alt="" class="kijiimg">
+      header-data.jpg
+      <p class="lead">蓄積したデータを活用するためには、いかに分析・解析するかが大切なポイントとなります。TimeSwitchでは標準的な視点からの分析に加えて、活用目的に応じた解析も提供します。</p>
+
+      <h2><i class="fa fa-check-square-o"></i>平均値のチェック</h2>
+      <p>基本的な平均値のチェックです。対象データ群の代表的な値を知ることができます。ただし、平均値だけではデータの偏りなどの問題は見えてきません。</p>
+
+      <h2><i class="fa fa-check-square-o"></i>分布のチェック</h2>
+      <p>統計的手法を用い、蓄積したデータの分布をチェックします。これにより平均値だけでは見えてこない問題や特徴を導きだします。</p>
+
+      <h2><i class="fa fa-check-square-o"></i>相関関係・因果関係の抽出</h2>
+      <p>複数のデータを組み合わせて分析・解析し、相関関係および因果関係があると考えられるデータを抽出します。</p>
+    </article>
+    </div>
+
+    <div class="box7-2">
+      <aside class="sidemenu">
+        <h1><i class="fa fa-caret-square-o-down"></i>事業紹介</h1>
+        <ul>
+          <li><a href="#">データの蓄積></a></li>
+          <li><a href="#">データの分析・解析></a></li>
+          <li><a href="#">わかりやすく視覚化></a></li>
+          <li><a href="#">アプリで有効活用></a></li>
+          <li><a href="#">24時間サポート></a></li>
+          <li><a href="#">実績紹介></a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+
+<!--ーーーーーーーーーーーーーーーーーーーーー
+ ボックス５ ：コピーライト
+ーーーーーーーーーーーーーーーーーーーーー -->
+<div class="box5">
+  <div class="box5-inner">
+  <div class="copyright">
+    <p>copyright &copy;TimeSwitch</p>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

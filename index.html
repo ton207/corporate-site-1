@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="grid-guide.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
+  <!-- jQueryを利用出来るようにする設定 -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <script>
+  $(function(){
+      // <button id="menubtn">をクリックした時に実行する処理を指定
+    $("#menubtn").click(function(){
+         $("#menu").slideToggle();
+      //<nav id="menubtn">をクリックした時に実行する処理を指定
+         });
+});
+</script>
+
+  <title>BUSINESS</title>
+</head>
+<!-- 製作手順
+５−１：レイアウトの基本構造を作る
+５−２：ボックスの中にコンテンツを入れる
+５−３；レイアウトの調整
+５−４：レスポンシブWEBデザインの調整
+５−５：パーツの追加・修正
+５−６：ナビをトグル型に -->
+<body>
+<!-- ーーーーーーーーーーーーーーーーーーーー
+ボックスA
+ーーーーーーーーーーーーーーーーーーーーー -->
+  <div class="boxA">
+    <div class="boxA-inner">
+<!-- ーーーーーーーーーーーーーーーーーーーー
+ボックス１（header-site)
+ーーーーーーーーーーーーーーーーーーーーー -->
+    <div class="box1">
+      <div class="site">
+        <h1><a href="#"><img src="logo-large.png" alt="TimeSwitch" width="250" height="33"></a></h1>
+      </div>
+    </div>
+    <!-- サイト名の画像を高解像度版に置き換える
+    250×33pxの代わりに４倍の1000×132pxを読込み
+    幅250高さ33に指定 p235p236-->
+
+<!-- ーーーーーーーーーーーーーーーーーー
+ボックス２(header-nav)：ナビ p273 276
+ーーーーーーーーーーーーーーーーーーー -->
+    <div class="box2">
+      <button type="button" id="menubtn">
+        <i class="fa fa-bars"></i><span>MENU</span>
+      </button>
+
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="#">トップ</a></li>
+          <li><a href="#">沿革</a></li>
+          <li><a href="#">事業紹介</a></li>
+          <li><a href="#">採用情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </div>
+<!-- ーーーーーーーーーーーーーーーーーー
+ボックス３(photo)：ヘッダー画像
+ーーーーーーーーーーーーーーーーーーー -->
+<div class="box3">
+  <div class="top">
+<img src="header.jpg" alt="ヘッダー画像" class=topimg>
+<p class="catch">TwitterSwitchはデータの蓄積と<br>分析・解析のサービスを提供します。</p>
+</div>
+</div>
+<!-- ーーーーーーーーーーーーーーーーーーーーーー
+ボックス６(pickup-1 pickup-2 pickup-3)：概要
+ーーーーーーーーーーーーーーーーーーーーーーー -->
+<div class="box6">
+  <div class="box6-1"><!-- pickup-1 -->
+    <div class="gaiyou">
+    <a href="#">
+    <i class="fa fa-database"></i>
+      <h1>データの分析・解析</h1>
+      <p>目的に応じて様々な角度から<br>
+      データを分析・解析します。</p>
+    </a>
+    </div>
+  </div>
+  <div class="box6-2"><!-- pickup-2 -->
+    <div class="gaiyou">
+    <a href="#">
+    <i class="fa fa-bar-chart-o"></i>
+      <h1>わかりやすく視覚化</h1>
+      <p>解析結果はわかりやすく視覚化し、<br>
+      活用できるようにします。</p>
+    </a>
+    </div>
+  </div>
+  <div class="box6-3"><!-- pickup-3-->
+    <div class="gaiyou">
+    <a href="#">
+    <i class="fa fa-envelope"></i>
+      <h1>24時間サポート</h1>
+      <p>24時間サポートでトラブルにも<br>
+      素早く対応します。</p>
+    </a>
+    </div>
+  </div>
+</div><!-- ボックス6の閉じタグ -->
+<!-- ーーーーーーーーーーーーーーーーーー
+BOX４−１(info-main)：お知らせ
+ーーーーーーーーーーーーーーーーーーー -->
+<div class="box4">
+  <div class="box4-1">
+    <!-- p240 BOX4を２分割お知せとSNSを横並 -->
+  <div class="news">
+    <h1>お知らせ</h1>
+    <ul>
+      <li><a href="#">
+        <time datetime="2014-10-15">10/15</time>
+        <div class="text">データセンターのメンテナンスを行います。</div>
+      </a></li>
+      <li><a href="#">
+        <time datetime="2014-10-05">10/05</time>
+        <div class="text">Android版アプリ バージョン1.2をリリースしました。</div>
+      </a></li>
+      <li><a href="#">
+        <time datetime="2014-9-22">09/22</time>
+        <div class="text">セミナー開催に伴うキャンペーンのお知らせ。  </div>
+      </a></li>
+      <li><a href="#">
+        <time datetime="2014-9-15">09/15</time>
+        <div class="text">グラフ表示の切り替え方法がわかりやすくなりました。 </div>
+      </a></li>
+    </ul>
+  </div>
+  </div>
+
+<!-- p226:横幅599px以下のブラウザ表示時に
+日付の下にテキストが入りこまないようにするために
+日付とテキストを各々ボックス入れる。
+日付は＜time＞でマークアップ済にてボックスに入れた形になってる
+テキストは＜div＞でマークアップしボックスに入れた形にする -->
+
+<!-- ーーーーーーーーーーーーーーーーーーー
+BOX4-2(info-sub) ： SNSメニュー
+ーーーーーーーーーーーーーーーーーーーーー-->
+<div class="box4-2">
+  <div class="follow">
+
+    <p class="follow-info">最新情報はこちらでも配信指定ます</p>
+
+    <ul>
+      <li><a href="#" class="fllow-tw">
+        <i class="fa fa-fw fa-twitter"></i>
+        Twitter
+      </a></li>
+      <li><a href="#" class="fllow-fb">
+        <i class="fa fa-fw fa-facebook"></i>
+        Facebook
+      </a></li>
+      <li><a href="#" class="fllow-gp">
+      <i class="fa fa-fw fa-google-plus"></i>
+      Google+
+    </a></li>
+    </ul>
+  </div>
+</div>
+</div><!-- box4の閉じタグ -->
+
+<!--ーーーーーーーーーーーーーーーーーーーーー
+ ボックス５ ：コピーライト
+ーーーーーーーーーーーーーーーーーーーーー -->
+<div class="box5">
+  <div class="box5-inner">
+  <div class="copyright">
+    <p>copyright &copy;TimeSwitch</p>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
